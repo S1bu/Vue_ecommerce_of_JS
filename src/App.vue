@@ -1,11 +1,28 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <NavbarComp/> <!--my nave bar-->
+  <BannerComp/>
+  <router-view/> <!--main content-->
+  <FooterComp/> <!---my footer footer-->
 </template>
 
+
+<script>
+//  import component here
+import NavbarComp from '@/components/NavbarComp.vue'
+import FooterComp from '@/components/FooterComp.vue'
+import BannerComp from '@/components/BannerComp.vue'
+
+export default {
+  name: 'HomeView',
+  components: {
+  //  register component here
+  NavbarComp, //nav regostered
+  FooterComp, //Footer registered
+  BannerComp,
+  }
+}
+
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -15,16 +32,5 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+ 
 </style>
