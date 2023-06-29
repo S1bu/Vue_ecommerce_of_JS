@@ -23,10 +23,16 @@ h1{
 
 #show{
     display: grid;
-    grid-template-columns:auto auto auto;
+    grid-template-columns:auto auto auto auto auto;
     margin: 5px;
 }
+
 .card{
     margin: 5px;
+}
+
+.card img{
+    object-fit:contain;
+    aspect-ratio: 3/2
 }
 </style>
