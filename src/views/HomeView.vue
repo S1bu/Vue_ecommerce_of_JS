@@ -1,10 +1,5 @@
 <template>
- 
-    <NavbarComp/> <!--my nave bar-->
-    <BannerComp/>
-    <router-view/> <!--main content-->
-    <FooterComp/> <!---my footer footer-->
- 
+ <div></div>
 </template>
 
 <script>
