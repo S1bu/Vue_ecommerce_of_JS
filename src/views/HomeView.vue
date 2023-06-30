@@ -17,5 +17,5 @@ import ProductDisplay from '@/components/ProductDisplay.vue'
 </script>
 
 <style scoped>
-
+ 
 </style>
