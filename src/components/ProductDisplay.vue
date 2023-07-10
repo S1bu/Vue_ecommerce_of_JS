@@ -1,15 +1,36 @@
 <template>
     <div class="banner">
         <h1>Product</h1>
-        <div id="show"></div>
+        <div id="show">
+            <div class="card" v-for="products in products" :key="products.id" >
+                <img :src="products.image" class="card-img-top" :alt="products.Title">
+                <div class="card-body">
+                  <h5 class="card-title">{{ products.Title }}</h5>
+                  <p class="card-text">{{ products.Brand }}</p>
+                  <p class="card-text">{{ products.Price }}</p>
+                  <p class="card-text">{{ products.Description }}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+        computed:{
+  products(){
+    return this.$store.state.products
+  }
+},
+mounted(){
+  this.$store.dispatch('fetchProducts')
+}
     }
 </script>
+
+
+
 
 <style  scoped>
 .banner{
@@ -23,7 +44,7 @@ h1{
 
 #show{
     display: grid;
-    grid-template-columns:auto auto auto auto auto;
+    grid-template-columns:auto auto auto;
     margin: 5px;
 }
 
@@ -36,3 +57,4 @@ h1{
     aspect-ratio: 3/2
 }
 </style>
+

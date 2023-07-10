@@ -75,27 +75,27 @@ export default {
  
 }
 }
-async function getData() {
-    let data = await fetch("https://s1bu.github.io/JSON_ECOMMERCE/products.json")
-    let peopleData = await data.json()
-    let extractedData = peopleData.products
-    let display = document.querySelector("#show")
-    extractedData.forEach(product => {
-        display.innerHTML +=`
-    <div class="card">
-  <img src="${product.image}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${product.Title}</h5>
-    <p class="card-text">Desscription :${product.Description}</p>
-    <p class="card-text">Price:${product.Price}</p>
-    <p class="card-text">Barnd${product.Brand}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-        `
-    })
-}
-getData()
+// async function getData() {
+//     let data = await fetch("https://s1bu.github.io/JSON_ECOMMERCE/products.json")
+//     let peopleData = await data.json()
+//     let extractedData = peopleData.products
+//     let display = document.querySelector("#show")
+//     extractedData.forEach(product => {
+//         display.innerHTML +=`
+//     <div class="card">
+//   <img src="${product.image}" class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <h5 class="card-title">${product.Title}</h5>
+//     <p class="card-text">Desscription :${product.Description}</p>
+//     <p class="card-text">Price:${product.Price}</p>
+//     <p class="card-text">Barnd${product.Brand}</p>
+//     <a href="#" class="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
+//         `
+//     })
+// }
+// getData()
 </script>
 <style>
 #app {
